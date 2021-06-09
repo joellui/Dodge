@@ -9,13 +9,13 @@ public class GameOver : MonoBehaviour
 {
     public GameObject gameOverScreen;
     public Text secondsServivedUI;
-    public Text highScoresecondServivedUI;
+    public Text highScoreSecondServivedUI;
     private bool gameOver;
     
     // Start is called before the first frame update
     void Start()
     {
-        highScoresecondServivedUI.text = Mathf.RoundToInt(PlayerPrefs.GetFloat("highScore",0)).ToString();
+        highScoreSecondServivedUI.text = Mathf.RoundToInt(PlayerPrefs.GetFloat("highScore",0)).ToString();
         FindObjectOfType<PlayerController>().OnPlayerDeath += onGameOver;
     }
 
@@ -26,7 +26,7 @@ public class GameOver : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
             }
         }
     }
@@ -40,7 +40,7 @@ public class GameOver : MonoBehaviour
         if (secondsSurvived > PlayerPrefs.GetFloat("highScore",0))
         {
             PlayerPrefs.SetFloat("highScore",secondsSurvived);
-            highScoresecondServivedUI.text = secondsSurvived.ToString();
+            highScoreSecondServivedUI.text = secondsSurvived.ToString();
         }
         
         
@@ -51,7 +51,12 @@ public class GameOver : MonoBehaviour
     public void Reset()
     {
         PlayerPrefs.DeleteKey("highScore");
-        highScoresecondServivedUI.text = "0";
+        highScoreSecondServivedUI.text = "0";
 
+    }
+
+    public void openMainPage()
+    {
+        SceneManager.LoadScene(0);
     }
 }
