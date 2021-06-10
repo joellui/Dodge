@@ -427,7 +427,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Made By: Joel Louis'
+  m_text: 'Made By: Joel Louis
+
+    Music By: Jarico -Island'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51198bbdd3f4b7344b272e83f21115e6, type: 2}
   m_sharedMaterial: {fileID: 8913251195584052683, guid: 51198bbdd3f4b7344b272e83f21115e6, type: 2}
@@ -454,8 +456,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 133.9
-  m_fontSizeBase: 133.9
+  m_fontSize: 83.36
+  m_fontSizeBase: 83.36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1088,3 +1090,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2507190573463507213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434276, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507190571533434282, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59c9023064cfb3448b508c41b116ac59, type: 3}

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private ParticleSystem particle;
     private MeshRenderer mr;
     private BoxCollider2D bc;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
         mr = GetComponent<MeshRenderer>();
         bc = GetComponent<BoxCollider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Break()
     {
         particle.Play();
+        audioSource.Play();
 
         bc.enabled = false;
         mr.enabled = false;
