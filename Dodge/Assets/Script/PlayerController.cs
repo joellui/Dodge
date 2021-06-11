@@ -33,10 +33,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputX = Input.GetAxisRaw("Horizontal");
-        float velocity = inputX * speed;
-        transform.Translate(Vector2.right * velocity*Time.deltaTime);
+        //float inputX = Input.GetAxisRaw("Horizontal");
+        //float velocity = inputX * speed;
+        //transform.Translate(Vector2.right * velocity*Time.deltaTime);
 
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Stationary)
+            {
+                if (touch.position.x < 1080/2f )
+                {
+                    transform.Translate(Vector2.left *speed*Time.deltaTime);
+
+                }
+                else if (touch.position.x >= 1080/2f)
+                {
+                    transform.Translate(Vector2.right *speed*Time.deltaTime);
+
+                }
+            }
+        }
+        
         if (transform.position.x < -screenHalfWidthInWorldUnits)
         {
             transform.position = new Vector2(screenHalfWidthInWorldUnits, transform.position.y);
