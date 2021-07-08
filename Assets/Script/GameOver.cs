@@ -9,6 +9,8 @@ public class GameOver : MonoBehaviour
     public Text secondsServivedUI;
     public Text highScoreSecondServivedUI;
     private bool gameOver;
+    public Text seconds;
+    public GameObject secondsBoard;
 
     
     // Start is called before the first frame update
@@ -18,11 +20,7 @@ public class GameOver : MonoBehaviour
         FindObjectOfType<PlayerController>().OnPlayerDeath += onGameOver;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void restart()
     {
@@ -50,11 +48,19 @@ public class GameOver : MonoBehaviour
         });
     }
 
+    private void Update()
+    {
+        seconds.text = Mathf.RoundToInt(Time.timeSinceLevelLoad).ToString();
+    }
+
     void onGameOver()
     {
         gameOverScreen.SetActive(true);
+        secondsBoard.SetActive(false);
 
         int secondsSurvived = Mathf.RoundToInt(Time.timeSinceLevelLoad);
+        
+        
         
         if (secondsSurvived > PlayerPrefs.GetFloat("highScore",0))
         {

@@ -31,6 +31,7 @@ public class GPSAuth : MonoBehaviour
 
     void signinwithplaygames()
     {
+        
         PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (success) =>
         {
             switch (success)
